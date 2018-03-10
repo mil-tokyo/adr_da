@@ -1,6 +1,5 @@
 *.npy
 *.mat
-*.png
 *.py~
 *.gz
 *.pt
