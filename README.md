@@ -1,10 +1,10 @@
-<img src='imgs/fig2.png' align="left" width=384>
+<img src='imgs/fig2.png' align="right" width=384>
 
 # Adversarial Dropout Regularization
 This is the implementation of Adversarial Dropout Regularization in Pytorch.
 The code is written by Kuniaki Saito.
 #### Adversarial Dropout Reguralization: [[Project]]() [[Paper]](https://openreview.net/forum?id=HJIoJWZCZ).
-<img src='imgs/picture_adr.png' width=500>
+<img src='imgs/picture_adr.png' width=900>
 
 ## Getting Started
 ### Installation
@@ -19,7 +19,7 @@ USPS dataset and place it in ~.
 ### ADR train/evaluation
 For example, adaptation from svhn to mnist.
 ```
-python main.py --source svhn --target mnist 
+python main.py --source svhn --target mnist
 ```
 
 
