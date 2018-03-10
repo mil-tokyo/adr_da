@@ -1,0 +1,10 @@
+*.npy
+*.mat
+*.png
+*.py~
+*.gz
+*.pt
+*.pkl
+*.xml
+*.py[cod]
+.idea/*
