@@ -21,7 +21,7 @@ class Solver(object):
         self.entropy = entropy
         self.checkpoint_dir = checkpoint_dir
         self.save_epoch = save_epoch
-
+        self.use_abs_diff = args.use_abs_diff
         if self.source == 'svhn':
             self.scale = True
         else:
@@ -86,10 +86,14 @@ class Solver(object):
             out2_t = out2_t.detach()
             out1_t = out1.clone()
             out1_t = out1_t.detach()
-            return (F.kl_div(F.log_softmax(out1), out2_t) + F.kl_div(F.log_softmax(out2),
+            if not self.use_abs_diff:
+                return (F.kl_div(F.log_softmax(out1), out2_t) + F.kl_div(F.log_softmax(out2),
                                                                      out1_t)) / 2
+            else:
+                return torch.mean(torch.abs(out1-out2))
         else:
             return self.ent(out1)
+        
 
     def train(self, epoch, record_file=None):
         criterion = nn.CrossEntropyLoss().cuda()

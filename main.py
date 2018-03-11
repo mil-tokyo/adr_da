@@ -34,6 +34,8 @@ parser.add_argument('--save_model', action='store_true', default=False,
                     help='save_model or not')
 parser.add_argument('--resume_epoch', type=int, default=100, metavar='N',
                     help='epoch to resume')
+parser.add_argument('--use_abs_diff', action='store_true', default=False,
+                    help='use absolute difference value as a measurement')
 args = parser.parse_args()
 args.cuda = not args.no_cuda and torch.cuda.is_available()
 torch.manual_seed(args.seed)
