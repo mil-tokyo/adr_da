@@ -5,35 +5,34 @@ from solver import Solver
 import os
 
 # Training settings
-parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
+parser = argparse.ArgumentParser(description='PyTorch ADR Experiments')
+parser.add_argument('--all_use', type=bool, default=False, metavar='N',
+                    help='option for mnist2usps using all mnist to train')
 parser.add_argument('--batch-size', type=int, default=128, metavar='N',
                     help='input batch size for training (default: 64)')
-parser.add_argument('--lr', type=float, default=0.0002, metavar='LR',
-                    help='learning rate (default: 0.01)')
-parser.add_argument('--optimizer', type=str, default='adam', metavar='N', help='which optimizer')
-parser.add_argument('--seed', type=int, default=1, metavar='S',
-                    help='random seed (default: 1)')
-parser.add_argument('--source', type=str, default='svhn', metavar='N',
-                    help='source dataset')
-parser.add_argument('--no-cuda', action='store_true', default=False,
-                    help='disables CUDA training')
-parser.add_argument('--target', type=str, default='mnist', metavar='N', help='target dataset')
-parser.add_argument('--max_epoch', type=int, default=200, metavar='N',
-                    help='how many epochs')
-parser.add_argument('--save_epoch', type=int, default=10, metavar='N',
-                    help='when to restore the model')
 parser.add_argument('--checkpoint_dir', type=str, default='checkpoint', metavar='N',
                     help='source only or not')
 parser.add_argument('--ent', type=bool, default=False, metavar='N',
                     help='entropy minimization based method or not')
-parser.add_argument('--all_use', type=bool, default=False, metavar='N',
-                    help='option for mnist2usps using all mnist to train')
-parser.add_argument('--eval_only', action='store_true', default=False,
-                    help='evaluation only option')
-parser.add_argument('--save_model', action='store_true', default=False,
-                    help='save_model or not')
+parser.add_argument('--eval_only', action='store_true', default=False, help='evaluation only option')
+parser.add_argument('--lr', type=float, default=0.0002, metavar='LR',
+                    help='learning rate (default: 0.01)')
+parser.add_argument('--max_epoch', type=int, default=200, metavar='N',
+                    help='how many epochs')
+parser.add_argument('--no-cuda', action='store_true', default=False,
+                    help='disables CUDA training')
+parser.add_argument('--optimizer', type=str, default='adam', metavar='N', help='which optimizer')
 parser.add_argument('--resume_epoch', type=int, default=100, metavar='N',
                     help='epoch to resume')
+parser.add_argument('--seed', type=int, default=1, metavar='S',
+                    help='random seed (default: 1)')
+parser.add_argument('--source', type=str, default='svhn', metavar='N',
+                    help='source dataset')
+parser.add_argument('--save_epoch', type=int, default=10, metavar='N',
+                    help='when to restore the model')
+parser.add_argument('--save_model', action='store_true', default=False,
+                    help='save_model or not')
+parser.add_argument('--target', type=str, default='mnist', metavar='N', help='target dataset')
 parser.add_argument('--use_abs_diff', action='store_true', default=False,
                     help='use absolute difference value as a measurement')
 args = parser.parse_args()

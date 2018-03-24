@@ -93,7 +93,7 @@ class Solver(object):
                 return torch.mean(torch.abs(out1-out2))
         else:
             return self.ent(out1)
-        
+
 
     def train(self, epoch, record_file=None):
         criterion = nn.CrossEntropyLoss().cuda()
