@@ -3,13 +3,10 @@ We present a domain adaptation method for transferring neural representations fr
 
 The work was accepted by ICLR 2018.
 [[PDF]](https://openreview.net/forum?id=HJIoJWZCZ).
-
+[[Code]](https://github.com/mil-tokyo/adr_da)
 ## Overview
+![](fig2.png)
 
-![](../imgs/fig2.png)
-
-## Code
-https://github.com/mil-tokyo/adr_da
 ## Citation
 If you use our code for your research, please cite our papers.
 ```
