@@ -3,7 +3,7 @@
 # Adversarial Dropout Regularization
 This is the implementation of Adversarial Dropout Regularization in Pytorch.
 The code is written by Kuniaki Saito. The work was accepted by ICLR 2018.
-#### Adversarial Dropout Reguralization: [[Project]]() [[Paper]](https://openreview.net/forum?id=HJIoJWZCZ).
+#### Adversarial Dropout Reguralization: [[Project]](https://github.com/mil-tokyo/adr_da) [[Paper]](https://openreview.net/forum?id=HJIoJWZCZ).
 <img src='imgs/picture_adr.png' width=900>
 
 ## Getting Started
