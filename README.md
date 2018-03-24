@@ -44,4 +44,5 @@ If you use this code for your research, please cite our papers.
 
 ```
 
-
+## License
+MIT
