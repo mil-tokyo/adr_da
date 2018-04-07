@@ -1,4 +1,4 @@
-<img src='imgs/fig2.png' width=384>
+<img src='imgs/fig2.png' width=800>
 
 # Adversarial Dropout Regularization
 This is the implementation of Adversarial Dropout Regularization in Pytorch.
@@ -16,10 +16,9 @@ The code is written by Kuniaki Saito. The work was accepted by ICLR 2018.
 pip install git+https://github.com/pytorch/tnt.git@master
 ```
 ## Download Dataset
-Download MNIST Dataset [here](). Resized image dataset is contained in the file.
+Download MNIST Dataset [here](https://drive.google.com/file/d/1cZ4vSIS-IKoyKWPfcgxFMugw0LtMiqPf/view?usp=sharing). Resized image dataset is contained in the file.
 Place it in the directory ./data.
-SVHN Dataset and place it in !.
-USPS dataset and place it in ~.
+
 
 ### ADR train/evaluation
 For example, adaptation from svhn to mnist.
